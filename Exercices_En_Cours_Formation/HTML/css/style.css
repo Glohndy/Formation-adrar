@@ -1,0 +1,26 @@
+h1 {
+    color: red;
+}
+
+.test{
+    color: aquamarine;
+}
+
+#morel .img{
+    width: 200px;
+    height: 300px;
+}
+
+#morel2 .img{
+    width: 200px;
+    height: 300px;
+}
+
+
+#morel{
+    background-color: gray;
+}
+
+#morel2{
+    text-align: right;
+}

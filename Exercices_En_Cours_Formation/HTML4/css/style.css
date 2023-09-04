@@ -1,0 +1,11 @@
+.paire{
+    color: blue;
+}
+
+.paire:hover{
+    color: black;
+}
+
+.impaire:hover{
+    color: blue;
+}

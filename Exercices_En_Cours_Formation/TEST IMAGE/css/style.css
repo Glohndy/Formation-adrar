@@ -1,0 +1,24 @@
+h1{
+    color: blue;
+}
+
+h3{
+    color:orange;
+    text-decoration: underline;
+}
+
+h1:hover{
+    color:yellow;
+}
+
+img:hover{
+    display: none;
+}
+
+img{
+margin-top: -20px;
+}
+
+p:hover{
+    background-color: gray;
+}
