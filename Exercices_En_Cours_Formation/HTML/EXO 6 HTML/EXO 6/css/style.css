@@ -15,10 +15,15 @@ img:hover{
     display: none;
 }
 
-img{
-margin-top: -20px;
+
+.color:hover{
+    background-color: gray;
 }
 
-p:hover{
-    background-color: gray;
+a {
+    color: blue;
+}
+
+img{
+margin-top: -18px;
 }

@@ -1,0 +1,38 @@
+h1{
+    color: red;
+    text-align: center;
+}
+
+#paragraphe1 h3{
+    color: blue;
+
+   
+}
+
+
+#paragraphe1 p{
+    background-color: gray;
+    text-align: justify;
+    text-align: right;
+}
+
+.jaune{
+    color: yellow;
+}
+
+.color {
+    color: aqua;
+}
+
+#paragraphe2 h3{
+    color: chartreuse;
+    text-align: right;
+    text-decoration: underline;
+}
+
+
+#paragraphe2 p{
+    text-align: right;
+    text-align: justify;
+    background-color: gray;
+}
