@@ -1,0 +1,19 @@
+table{
+     border: double;
+     border-color: red;
+     border-width: 4px;
+     border-collapse: collapse;
+}
+
+tr{
+    border:solid 2px black;
+}
+
+th{
+    background-color: rgb(28, 28, 226);
+    border-left: solid 2px black;
+}
+
+td{
+    border-left: solid 2px black;
+}
