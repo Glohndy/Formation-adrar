@@ -1,0 +1,30 @@
+#image1{
+    background: radial-gradient(pink 0, blue 100%);
+}
+
+#image1{
+    width: 200px;
+    height: 200px;
+}
+
+
+
+#image2{
+    background: repeating-radial-gradient(black, white 10%);
+    margin-top: 10px;
+}
+
+#image2{
+    width: 200px;
+    height: 200px;
+}
+
+
+#image2:hover{
+   background: repeating-radial-gradient(white, black 10%);
+
+}
+
+
+
+
