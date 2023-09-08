@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="contact-form" method="post" action="">
+        <h1><strong>Connexion</strong></h1>
+        <div class="pseudo">
+            <label for="pseudo">Pseudo:</label>
+            <input id="pseudo" type="text" name="pseudo" placeholder="Mon speudo" maxlength="20" minlength="2">
+        </div>
+        <div class="motdepasse">
+            <label for="motdepasse">Mot de passse:</label>
+            <input id="motdepasse" type="text" name="motdepasse" placeholder="Mon mot de passe" maxlength="20" minlength="2">
+        </div>
+        <div class="sesouvenir">
+            <input id="sesouvenir" type="checkbox" name="html" checked>
+            <label for="sesouvenir">Se souvenir de moi</label>
+        </div>
+        <div id="bouton">
+        <input id="connexion" type="submit" value="Connexion">
+        <input id="retour" type="submit" value="Retour" class="retour">
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+.paragraphe1{
+    background-color: gray;
+    border:solid 2px green;
+    height: 100px;
+    margin: 0px;
+    padding: 20px;
+}
+
+.paragraphe2{
+    background-color: gray;
+    border:solid 2px green;
+    width: 50%;
+    padding: 1.2em;
+    margin: 20px,5px;
+}
+
+.paragraphe3{
+    background-color: gray;
+    border:solid 2px green;
+    width: 200px;
+    padding: -30px;
+    height: 200px;
+    margin: auto;
+}
+body{
+    background-color: blueviolet;
+    padding: 0px;
+    margin: 0px;
+}
