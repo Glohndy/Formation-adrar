@@ -6,11 +6,11 @@ div, p{
 }
 
 div:nth-child(1){
-    background-image: linear-gradient(to bottom left, red, green, blue);
+    background-image: linear-gradient(to bottom left, red,green,blue);
 }
 
 div:nth-child(2){
-    background-image: linear-gradient(-70deg, yellow 0%, purple 25%);
+    background-image: linear-gradient(-70deg,yellow 0%, purple 20%);
 }
 p{
     background-image: linear-gradient(white, rgba(0,0,0,0.5));
