@@ -1,0 +1,60 @@
+body{
+	background-color: lightgray;
+}
+
+
+#container{
+	display: flex;
+	text-align: center;
+	margin-top: 15px;
+
+}
+
+.photo{
+	border: 1px black solid;
+	display: flex;
+	flex-direction: column;
+	margin: 15px;
+	background-color: white;
+}
+
+.photo img{
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+#bouton{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#accueil{
+	padding: 5px;
+	background-color: black;
+	color: white;
+}
+
+#contact{
+	padding: 5px;
+	background-color: black;
+	color: white;
+}
+
+#condition{
+	padding: 5px;
+	background-color: black;
+	color: white;
+}
+
+@media(max-width:1400px){
+.photo , .img, .p {
+    font-size: 4em;
+}
+@media(max-width:1200px){
+#container, .photo, .img, p{
+	display: flex;
+	flex-direction: row;
+    font-size: 4em;
+}
