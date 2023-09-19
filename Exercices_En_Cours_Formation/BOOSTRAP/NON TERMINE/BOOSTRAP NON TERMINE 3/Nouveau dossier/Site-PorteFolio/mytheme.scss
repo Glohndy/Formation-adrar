@@ -1,0 +1,38 @@
+
+// 1er cas
+
+$primary-color: #121A3E;
+$secondary-color: #F7CB2A;
+
+$navbar-light-brand-color:$primary-color;
+
+$theme-colors: (
+  "primary": $primary-color,
+  "primary50":rgba($primary-color, $alpha: 0.5),
+  "secondary":$secondary-color,
+  "black":#000
+);
+
+$carousel-caption-width: 50%;                            
+
+@import './css/scss/bootstrap'; 
+
+
+.nav-link:hover{
+  background-color: theme-color-level(primary,-3);
+  color: white;
+}
+
+
+
+.card{
+  cursor : pointer;
+}
+
+.img1{
+  background-image: url(https://pic.clubic.com/v1/images/1709824/raw);
+  height: 600px;
+  background-position: bottom;
+}
+
+
