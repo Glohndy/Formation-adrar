@@ -272,3 +272,10 @@ let longueur;  /*pour creer le nom de la variable*/
 longueur=200;  /*déclarier la variable*/
 console.log(longueur); 
 
+// Incrémentation
+console.log(longeur);
+longueur=longueur + 1000;
+console.log(longueur);
+longueur += 1000; // Raccourci de notation
+console.log(longueur);
+
