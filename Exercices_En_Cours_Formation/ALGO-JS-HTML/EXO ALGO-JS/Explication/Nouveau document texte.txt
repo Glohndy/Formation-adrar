@@ -1,0 +1,57 @@
+// Point de vue interne
+// Création une fonction
+function sayHello() {
+    console.log("Hello");
+}
+
+// Point de vue externe
+// Appel de la fonction
+// Appeler/ Utiliser / Lancer / Exécuter / Démarrer
+sayHello();
+// Les parenthèses signifient : démarrer la fonction
+// Donc cette ligne affiche "Hello"
+
+// =============================
+// Première variation : on peut donner une ou plusieurs informations en entrée. Au moment de la démarrer, on lui dit "Tiens, 27".
+// Point de vue interne
+// Quand on crée la fonction, on la prépare en lui expliquant : "quand tu vas démarrer, tu recevras une information. Cette information, tu vas la stocker dans une variable".
+function sayHi(name) {
+    // La variable name contiendra l'information donnée à la fonction lors de l'appel
+    console.log("Hi", name);
+}
+
+// Point de vue externe
+// Quand on utilise une fonction qui s'attend à recevoir une information, il faut qu'on lui donne cette information.
+sayHi("Pierre"); // J'appelle la fonction en lui donnant la valeur "Pierre".
+// forward(100); // J'appelle la fonction forward en lui donnant la valeur 100.
+
+// Quand on est à l'extérieur de la fonction, on ne voit pas ce qui se passe dans la fonction.
+
+
+// =============================
+// Deuxième variation : la fonction peut donner un résultat en retour. Un peu de la même façon que le calcul 1+2 nous dit "ça fait 3".
+// Point de vue interne
+function triple(n) { // J'attends une information en entrée, que je vais enregistrer dans la variable n
+    let d = 3*n; // Cette variable ne sort pas de lafonction.
+    return d; // Je lis la valeur de la variable pour donner le résultat.
+}
+
+// Le mot-clé return signifie deux choses :
+// 1) La fonction est terminée
+// 2) Le résultat est :
+
+// Point de vue externe
+// J'appelle la fonction en lui donnant la valeur 50.
+triple(50);
+// Cet appel ne sert à rien.
+// La fonction me répond que le triple de 50 est 150, mais je ne fais rien du résultat.
+// C'est comme si j'avais écrit :
+1+2;
+// Le + me répond que ça fait 3, mais ce calcul ne sert à rien, il est fait dans le vide.
+// Si je voulais l'afficher dans la console, je devrais faire :
+console.log(1+2);
+// Même principe pour le résultat de la fonction :
+console.log(triple(50)); // Afficher dans la console (le résultat de l'appel de triple avec l'information 50).
+
+// Si j'avais voulu stocker le résultat pour plus tard :
+let memory = triple(50); // Je crée une variable "memory" et je mets dedans (le résultat de l'appel de triple avec l'information 50).
