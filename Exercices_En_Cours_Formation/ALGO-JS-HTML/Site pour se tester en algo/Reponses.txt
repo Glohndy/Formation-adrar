@@ -1,0 +1,107 @@
+FORME COMPLIQUE 1
+function setup() {
+  createCanvas(400, 400);
+  stroke(255);
+  strokeWeight(3);
+  noFill();
+}
+
+function draw() {
+  background(0);
+  // Forme compliquée
+  circle(200,200, 100);
+  circle(200,200, 50);
+  ellipse(200,200, 100, 50);
+  ellipse(200,200, 50, 100);
+}
+
+
+FORME COMPLIQUE 2
+function setup() {
+  createCanvas(600, 600);
+  stroke(255);
+  strokeWeight(3);
+  noFill();
+}
+
+function formeBizarre(x, y) {
+  circle(x, y, 100);
+  circle(x, y, 50);
+  ellipse(x, y, 100, 50);
+  ellipse(x, y, 50, 100);
+}
+
+function draw() {
+  background(0);
+  // Forme compliquée
+//   circle(200,200, 100);
+//   circle(200,200, 50);
+//   ellipse(200,200, 100, 50);
+//   ellipse(200,200, 50, 100);
+  
+  // Dessiner une forme bizarre à tel endroit
+  formeBizarre(300, 300);
+  
+  // circle(100,100, 100);
+  // circle(100,100, 50);
+  // ellipse(100,100, 100, 50);
+  // ellipse(100,100, 50, 100);
+  formeBizarre(150,150);
+  
+  // circle(300,100, 100);
+  // circle(300,100, 50);
+  // ellipse(300,100, 100, 50);
+  // ellipse(300,100, 50, 100);
+  formeBizarre(450,150);
+  
+  formeBizarre(150,450);
+  formeBizarre(450,450);
+  formeBizarre(mouseX, mouseY);
+}
+
+
+FORME COMPLIQUE 3
+function setup() {
+  createCanvas(600, 600);
+  strokeWeight(3);
+  noFill();
+}
+
+function formeBizarre(x, y, size) {
+  stroke(255);
+  circle(x, y, size);
+  ellipse(x, y, size, size/2);
+  ellipse(x, y, size/2, size);
+  
+  stroke(255,0,0);
+  circle(x, y, size/2);
+}
+
+function draw() {
+  background(0);
+  // Forme compliquée
+//   circle(200,200, 100);
+//   circle(200,200, 50);
+//   ellipse(200,200, 100, 50);
+//   ellipse(200,200, 50, 100);
+  
+  // Dessiner une forme bizarre à tel endroit
+  formeBizarre(300, 300, 150);
+  
+  // circle(100,100, 100);
+  // circle(100,100, 50);
+  // ellipse(100,100, 100, 50);
+  // ellipse(100,100, 50, 100);
+  formeBizarre(150,150, 100);
+  
+  // circle(300,100, 100);
+  // circle(300,100, 50);
+  // ellipse(300,100, 100, 50);
+  // ellipse(300,100, 50, 100);
+  formeBizarre(450,150, 100);
+  
+  formeBizarre(150,450, 100);
+  formeBizarre(450,450, 100);
+  formeBizarre(mouseX, mouseY, 75);
+  
+}

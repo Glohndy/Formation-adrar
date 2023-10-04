@@ -1,0 +1,60 @@
+function displayMessage(age) {
+    if(age < 18) {
+        console.log("La personne est mineure.");
+    } else {
+        console.log("La personne est majeure.");
+    }
+}
+
+let age1 = 5;
+let age2 = 25;
+let age3 = 250;
+let age4 = -7;
+
+// displayMessage(age1);
+// displayMessage(age2);
+// displayMessage(age3);
+// displayMessage(age4);
+
+let ages = [5, 25, 250, -7, 155, 15,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
+for(let i = 0 ; i < ages.length ; i++) {
+    displayMessage(ages[i]);
+}
+
+
+// Création d'un tableau
+// Je le stocke dans une variable
+// let t = []; // Tableau vide
+let t = [4,8,50,8,0,-2];
+
+// Automatiquement, les cases sont numérotées de 0 à 5.
+
+console.log(t);
+
+// Accéder à une case du tableau : grâce à son numéro de case
+t[2] // Tout seul, ne sert à rien
+t[2] = 5;
+console.log(t[2]);
+
+// Ajouter une case à la fin du tableau
+t.push(777);
+console.log(t);
+
+// Retirer la dernière case du tableau
+t.pop();
+console.log(t);
+// La fonction pop du tableau retourne la valeur qui était dans la dernière case (que l'on vient de supprimer).
+console.log("Je supprime la dernière case. Elle contenait :", t.pop());
+console.log("Le nouveau tableau :", t);
+
+// Taille du tableau
+t.length // variable qui existe automatiquement lorsque l'on crée un tableau, et qui contient le nombre de cases de ce tableau.
+console.log("Nombre de cases du tableau :", t.length);
+
+// Parcours du tableau à l'aide de la boucle for :
+for(let i = 0 ; i < t.length ; i++) {
+    // ...t[i]...
+}
+// Pour i qui va de 0 jusqu'à la taille du tableau, je fais un truc avec la case numéro i.
+// Pour chaque numéro de case, ...
