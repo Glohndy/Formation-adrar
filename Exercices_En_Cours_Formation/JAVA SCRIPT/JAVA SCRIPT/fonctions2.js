@@ -215,3 +215,142 @@ switch (age) {
         console.log("Cadet");
         break;
 }
+
+
+
+//Exercice 6 : Tests : 
+//Ecrire un algorithme qui demande 3 mots et affiche dans la console si ils sont triés dans l'ordre alphabétiques.
+//version avec des variables (string)
+let mot1 = prompt('Veuillez saisir un mot');
+let mot2 = prompt('Veuillez saisir un mot');
+let mot3 = prompt('Veuillez saisir un mot');
+if(mot1<=mot2 && mot2<=mot3){
+    console.log('Les mots sont dans l\'ordre alphabétique');
+}
+else {
+    console.log('Les mots ne sont pas dans l\'ordre alphabétique');
+}
+//version avec un tableau
+let mots = [];
+mots[0] = prompt('Saisir un mot');
+mots[1] = prompt('Saisir un mot');
+mots[2] = prompt('Saisir un mot');
+
+let tabTri = [];
+tabTri[0]= mots[0];
+tabTri[1]= mots[1];
+tabTri[2]= mots[2];
+
+tabTri.sort();
+if(tabTri[0]==mots[0]&&tabTri[1]==mots[1]&&tabTri[2]==mots[2]){
+    console.log('Les mots sont dans l\'ordre alphabétique');
+}
+else {
+    console.log('Les mots ne sont pas triés dans l\'ordre');
+}
+
+
+//Cours
+//Tableau :
+//Créer un tableau vide
+let tab= []
+//créer un tableau avec des valeurs
+let tab2= [10,52, 25, 42];
+//ajouter des données à un tableau dans une colonne
+tab2[4] = 35;
+//ajouter des données à la fin d'un tableau
+tab2.push(88);
+//supprimer la dernière colonne
+tab2.pop()
+//modifier une colonne par son numéro
+tab2[2] = 14
+
+
+
+
+//Exercice 7 tableau :
+//Créer un algorithme qui va demander 3 valeurs numériques (prompt 3 fois) ajouter ces valeurs à un tableau vide (1 valeur 1 colonne,
+ 2 éme valeur 2 éme colonne, 3 éme valeur 3 éme colonne),
+//tester si les valeurs sont dans l'ordre croissant (afficher un message dans la console les valeurs sont triées par ordre croissant),
+//sinon (afficher un message dans la console valeurs ne sont pas triées dans l'ordre croissant*)
+let nbr1 = prompt("Saisir un nombre");
+let nbr2 = prompt("Saisir un nombre");
+let nbr3 = prompt("Saisir un nombre");
+let tab =[];
+//version ajout des colonnes par leur index
+tab[0] = nbr1;
+tab[1] = nbr2;
+tab[2] = nbr3;
+//version remplacement du contenu du tableau
+/* tab = [nbr1,nbr2,nbr3]
+//version avec la méthode push ajouter à la fin du tableau
+tab.push(nbr1,nbr2,nbr3) */
+//test si les nombres sont bien triés
+if(tab[0]<=tab[1]&&tab[1]<=tab[2]){
+    console.log('Les valeurs sont triées par ordre croissant');
+}
+//test sinon pas dans l'ordre
+else{
+    console.log('Les valeurs ne sont pas triées par ordre croissant');
+}
+
+
+
+
+//Exercice 8 Tableau :
+//Créer un programme qui va demander 3 valeurs (prompt *3) :
+-nom de produit (string),
+-prix HT (float),
+-quantité (integer),
+Ajouter ces informations dans un tableau (chaque valeur dans une nouvelle colonne),
+Calculer le prix TTC (prix HT X 1.20 X quantité) et stocker le prix TTC à la fin du tableau.
+Afficher le Prix TTC dans la console (depuis la dernière colonne du tableau)
+//Récupérer les 3 valeurs
+let nomProduit = prompt("Saisir le nom du produit");
+let prixHt = parseFloat(prompt("Saisir le prix HT du produit"));
+let quantite = parseInt(prompt("Saisir quantite du produit"));
+//créer un tableau vide
+let tab = [];
+//ajouter les 3 valeurs 
+tab[0] = nomProduit;
+tab[1] = prixHt;
+tab[2] = quantite;
+//création du tableau avec les 3 valeurs
+//let tab = [nomProduit,prixHt, quantite];
+//ajouter les colonnes au tableau avec la fonction push
+//tab.push(nomProduit, prixHt, quantite);
+tab.push(prixHt*quantite*1.20);
+//version concatenation
+console.log("Le prix TTC est égal à : "+Math.round(tab[3],2)+ " €");
+//version template string
+console.log(`Le prix TTC est égal à : ${Math.round(tab[3],2)} €`);
+
+
+
+
+
+//Exemple boucle avec tableau :
+let produits = [];
+for(let i = 0;i< 2; i++){
+    let produit = {
+        'nom': prompt("Saisir le nom du produit"),
+        'prixHt': parseFloat(prompt("Saisir le prix HT du produit")),
+        'quantite': parseInt(prompt("Saisir la quantité du produit"))
+    };
+    produit.prixTtc = produit.prixHt*produit.quantite*1.2;
+    produits.push(produit);
+}
+
+
+
+
+
+//Exercice 9 Tableau et boucle :
+//Créer un algorithme qui va ajouter à un tableau users (tableau indexé) :
+//à chaque tours de la boucle : 
+-un utilisateur (user) (tableau associatif)  qui va contenir : 
+             -> nom, prénom, age et un numéro de téléphone,
+             (les valeurs seront récupérés avec des prompts)
+-La boucle va tourner 5 fois,
+Afficher dans la console le nom et le prénom de l'utilisateur qui est le plus jeune (tableau users).
+Bonus : afficher dans les prompts (le numéro de l'utilisateur que vous ajoutez)
