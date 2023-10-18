@@ -499,6 +499,27 @@ alert("Le prix total est égal à : "+total);
 
 
 
+//Exercice 11 BIS Conditions  :
+let quantité = prompt("nombre de choco");
+let inferieur10prix = (1.40 * quantité);
+if(quantité <= 10){
+    console.log(inferieur10prix);
+}
+let superieur10prix = [(quantité - 10) * 1.3 + 14];
+if(quantité > 10 && quantité <= 20){
+    console.log(superieur10prix);
+}
+let superieur20prix = [(quantité - 20) * 1.20 + 27];
+if(quantité > 20){
+    console.log(superieur20prix);
+}
+
+
+
+
+
+
+
 
 
 //Exercice 12 Boucles :
