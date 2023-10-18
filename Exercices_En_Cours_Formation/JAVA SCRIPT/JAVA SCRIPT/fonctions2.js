@@ -354,3 +354,215 @@ for(let i = 0;i< 2; i++){
 -La boucle va tourner 5 fois,
 Afficher dans la console le nom et le prénom de l'utilisateur qui est le plus jeune (tableau users).
 Bonus : afficher dans les prompts (le numéro de l'utilisateur que vous ajoutez)
+let indice = 0;
+let users = [];
+for(let i = 0; i<5; i++){
+    let user = {
+        'nom': prompt("user num "+(i+1)+" Saisir le nom :"),
+        'prenom':prompt("user num "+(i+1)+" Saisir le prénom"),
+        'age':prompt("user num "+(i+1)+" Saisir l'age"),
+        'tel':prompt("user num "+(i+1)+" Saisir le numéro")
+    }
+    //version avec indice
+    //users[i] = user;
+    //version avec push
+    users.push(user);
+}
+let minAge = users[0].age;
+for(let i = 0; i<users.length; i++){
+    //compare si l'age de la colonne est plus petit que l'age de minAge
+    if(users[i].age < minAge){
+        //remplacer les valeur age minimum
+        minAge = users[i].age;
+        //remplacer la valeur de la colonne (indice du tableau)
+        indice = i;
+    }
+}
+console.log("L'utilisateur le plus jeune est : "+users[indice].prenom+" "+users[indice].nom);
+
+
+//Correction exercice 9 bis :
+//tableau qui va stocker la liste des utilisateurs
+let users = [];
+//boucle qui va créer 5 utilisateurs
+for(let i = 0; i < 3; i++){
+    let user = {
+        'nom': prompt("Saisir le nom de l'utilisateur N° : "+(i+1)),
+        'prenom': prompt("Saisir le prénom de l'utilisateur N° : "+(i+1)),
+        'age': prompt("Saisir l'age de l'utilisateur N° : "+(i+1)),
+        'tel': prompt("Saisir le numéro de téléphone de l'utilisateur N° : "+(i+1))
+    }
+    //version avec push
+    users.push(user);
+    //version avec les indices
+    //users[i] = user;
+}
+/* let minAge = users[0].age; */
+let indice = 0;
+//parcourir le tableau users 
+for(let i = 0; i<users.length; i++){
+    //tester si l'age est plus petit que minAge
+    if(users[i].age < users[indice].age){
+        indice = i;
+    }
+}
+console.log("L'utilisateur "+users[indice].nom+" "+users[indice].prenom+" est le plus jeune");
+
+
+
+
+
+
+
+//Exercice 10 Boucle :
+/Un enseignant a besoin de saisir les notes de ses élèves.
+//Il a également besoin depuis ces notes de calculer la moyenne.
+//Écrire le programme qui permet de saisir la liste des notes (dans un prompt), les stocker dans un tableau et retourner la moyenne du devoir (afficher dans la console).
+//tableau qui va stocker les nombres
+let notes = [];
+//variable qui stocke le nombre de notes
+nbrNotes = parseInt(prompt("Choisir le nombre de notes à saisir"));
+//compteur
+let i = 0;
+//somme
+let somme = 0;
+//valide (tant que le format de données est correct)
+let valide = true;
+//boucle pour ajouter les notes et calculer la somme
+while(i < nbrNotes && valide){
+    //ajout d'une note
+    let note = parseInt(prompt("Saisir la note de l'èléve"));
+    //test si la note est bien un nombre entier
+    if(Number.isInteger(note)){
+        //ajouter la note au tableau
+        notes[i] = note;
+        //ajouter a la somme des notes
+        somme += notes[i]; 
+    }
+    //test sinon le format est incorrect
+    else{
+        //on passe valide à false
+        valide = false;
+    }
+    //on incremente le compteur
+    i++;
+}
+//test si valide vaut true
+if(statut){
+    //affiche la moyenne
+    console.log(somme/nbrNotes);
+
+}
+//sinon on affiche une erreur
+else{
+    console.log("Vous avez une note invalide");
+}
+
+
+
+
+
+
+
+//Exercice 11 Conditions  :
+//Une boulangerie vend des chocolatines. Pour calculer le prix qu'elle va facturer a ses clients elle a besoin d'un programme. 
+//-Une chocolatine coûte 1€40 a l'unité jusqu'à 10. 
+//-Les 10 suivantes coûtent 1€30 pièce et 
+//-Au-delà elles coûtent 1€20 pièce.
+//Écrire un programme qui calcule le prix à payer  en fonction de la quantité (depuis un prompt) 
+//Afficher dans la console le montant à payer.
+//quantité de chocolatine
+let nbrChoco = parseInt(prompt("Saisir le nombre de chocolatine"));
+//prix total
+let total = 0;
+//prix des chocolatines
+let prixChoco = [1.4, 1.3, 1.20];
+//tester le prix pour la quantité comprise entre 1 et 10
+if(nbrChoco > 0 && nbrChoco <= 10){
+    total = nbrChoco * prixChoco[0];
+}
+//tester le prix pour une quantité comprise entre 1 et 20
+else if(nbrChoco >= 11 && nbrChoco <= 20){
+    total = (10*prixChoco[0])+((nbrChoco-10)*prixChoco[1]);
+}
+//tester le prix pour une quantité supérieure 
+else{
+    total = (10*prixChoco[0])+(10*prixChoco[1])+((nbrChoco-20)*prixChoco[2]);
+}
+//afficher dans la console
+console.log("Le prix total est égal à : "+total);
+//afficher dans un popup
+alert("Le prix total est égal à : "+total);
+
+
+
+
+
+
+
+
+//Exercice 12 Boucles :
+//Pour son nouveau spectacle, un mentaliste a besoin d'un programme pour s'exercer à deviner un nombre entre 1 et 100.
+//Pour réussir son tour il doit deviner le nombre en moins de 10 tentatives.
+//A chaque tour il va demander si le nombre qu’il énonce est plus petit ou plus grand que le nombre choisi.
+//-Si il réussit à découvrir le nombre en moins de 10 essais 
+//            -> son entrainement acharné a payé, 
+//-Sinon 
+ //          -> il est un mauvais mentaliste et il va devoir changer de métier.
+//Il souhaite savoir en cas de réussite (en moins de 10 essais) 
+ //          -> le nombre d'essai qu'il a effectué pour trouver le nombre.
+//nombre random à trouver
+let nbrATrouve = numberRandom(100);
+console.log(nbrATrouve);
+//nombre de tour de jeu
+let tour = 1;
+//première tentative
+let nbrTrouve = prompt("Saisir le nombre à trouver");
+//boucle pour le jeu
+while(nbrATrouve != nbrTrouve && tour < 10){
+    //condition si le nombre est trop grand
+    if(nbrTrouve > nbrATrouve){
+        alert("Saisir un nombre plus petit");
+    }
+    //condition si le nombre est trop petit
+    if(nbrTrouve < nbrATrouve){
+        alert("Saisir un nombre plus Grand");
+    }
+    //incrémenter le tour
+    tour++;
+    //redemander la saisie d'un nombre
+    nbrTrouve = prompt("Saisir le nombre à trouver");
+}
+//condition de victoire
+if(nbrATrouve==nbrTrouve){
+    alert("Bravo tu as gagné en : "+tour+" tours");
+}
+//condition de défaite
+if(tour > 9){
+    alert("Vous avez perdu vous pouvez changer de métier !");
+}
+//fonction qui génére un nombre random
+function numberRandom(nbr){
+    return Math.floor((Math.random() * nbr) + 1);
+}
+
+
+
+
+
+
+
+
+//Exercice 13 Boucles :
+//Nous avons un jeu de dés que nous souhaitons automatiser.
+//Les règles de ce jeu de dès sont les suivantes :
+//-Il y à 2 participants : la banque et le joueur.
+//-Le jeu dure 5 tours.
+//-A chaque tour :
+//    --La banque lance un dès de 6 faces (score 1 à 6).
+//    --Le joueur lance un dès de 6 faces (score 1 à 6).
+ //   --Si le joueur fait plus que la banque, ajouter 1 pts au score du joueur,
+//    --Si le joueur fait le même lancé que la banque, ajouter 2 pts au score du joueur.
+ //   --Si le joueur fait moins que la banque, ajouter 1 pts au score de la banque.
+//-A la fin des 5 tours le gagnant est celui qui a le score le plus élevé.
+//-> Afficher le gagnant et son score (nbr de pts).
