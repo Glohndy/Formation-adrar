@@ -695,3 +695,97 @@ localStorage.setItem("Test", 125);
 localStorage.removeItem("Test");
 //supprimer toutes les clés
 localStorage.clear();
+
+
+
+//Exercice 20 DOM :
+Depuis la correction de l'exercice 19 :
+Créer une clé "tasks" qui va avoir comme valeur un tableau vide dans le localStorage (  []  ) 
+pour éviter que le clé tasks soit réécrite chaque fois.
+-Réutiliser le code de la correction de l'exercice 19.
+Ajouter dans la partie html sur le body l'attribut : 
+-onload="showAllTask()"
+Ajouter une nouvelle méthode showAllTasks :
+-depuis la clé tasks du localStorage et la tansformer en tableau split(',')
+-Parcourir le tableau et générer les tâches (comme dans la fonction addTask()) :
+
+//fonction pour générer les tâches depuis le localstorage
+function showAllTask(){
+    //récupération de la clé task dans localstorage
+    let taches = localStorage.getItem('tasks');
+    //test si taches ne contient rien
+    if(taches!=""){
+        //convertion en tableau
+        taches = taches.split(',');
+        //boucle pour parcourir le tableau de tâches
+        for(let i = 0; i<taches.length; i++){
+            //création du container (container)
+            const container = document.createElement('div');
+            //ajout de l'attribut class : container (div container)
+            container.setAttribute('class', 'container');
+            //création du paragraphe
+            const paragraphe = document.createElement('p');
+            paragraphe.textContent = taches[i];
+            const btUpdate = document.createElement('button');
+            //création du bouton update
+            btUpdate.textContent = "Update";
+            btUpdate.setAttribute('onclick','updateTask(this)');
+            btUpdate.setAttribute('id','update');
+            //création du bouton delete
+            const btDelete = document.createElement('button');
+            btDelete.textContent = "Delete";
+            btDelete.setAttribute('onclick','deleteTask(this)');
+            //ajouter les enfants à la div (container)
+            container.appendChild(paragraphe);
+            container.appendChild(btUpdate);
+            container.appendChild(btDelete);
+            //ajouter la div container à liste
+            liste.appendChild(container);
+        }
+    }
+}
+
+//à mettre tout en haut du script JS (créer la clé tasks dans localstorage)
+localStorage.getItem('tasks') == null ? localStorage.setItem("tasks",[]):false; 
+//fonction pour ajouter une tâche
+function addTask(){
+    //récupération de l'input ('#task)
+    let valeur = document.querySelector('#task').value;
+    //récupérer dans une variable la valeur clé ('tasks')
+    let tasks = localStorage.getItem('tasks');
+    //test si la clé tasks dans localstorage est vide
+    if(tasks==""){
+        tasks+= valeur;
+    }
+    //test sinon elle n'est pas vide
+    else{
+        //transforme en tableau
+        tasks = tasks.split(",");
+        //ajoute la valeur de l'input au tableau
+        tasks.push(valeur);
+    }
+    //mise à jour de la clé
+    localStorage.setItem('tasks',tasks);
+    //création du container (container)
+    const container = document.createElement('div');
+    //ajout de l'attribut class : container (div container)
+    container.setAttribute('class', 'container');
+    //création du paragraphe
+    const paragraphe = document.createElement('p');
+    paragraphe.textContent = valeur;
+    const btUpdate = document.createElement('button');
+    //création du bouton update
+    btUpdate.textContent = "Update";
+    btUpdate.setAttribute('onclick','updateTask(this)');
+    btUpdate.setAttribute('id','update');
+    //création du bouton delete
+    const btDelete = document.createElement('button');
+    btDelete.textContent = "Delete";
+    btDelete.setAttribute('onclick','deleteTask(this)');
+    //ajouter les enfants à la div (container)
+    container.appendChild(paragraphe);
+    container.appendChild(btUpdate);
+    container.appendChild(btDelete);
+    //ajouter la div container à liste
+    liste.appendChild(container);
+}
