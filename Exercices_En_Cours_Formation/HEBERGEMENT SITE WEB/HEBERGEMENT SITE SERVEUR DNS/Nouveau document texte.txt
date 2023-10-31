@@ -1,0 +1,7 @@
+	MARCHINE CLIENT: sa configuration on met l'adresse du DNS.
+	MARCHINE DNS: sa configuration on met l,adresse ip de l'adresse dns dans le dns. Dans la configuration de la marchine DNS on n'associ le nom de domaine du DNS
+			l'adresse ip du IIS(HEBERGEUR DU SITE).
+	MARCHINE IIS(HEBERGEUR): sa configuration on met l'adresse du DNS
+
+	IL FAUT ETEINDRE LA MARCHINE POUR AJOUTER UNE 2EME CARTE RESEAU
+	
