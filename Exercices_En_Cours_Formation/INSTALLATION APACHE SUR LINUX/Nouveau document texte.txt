@@ -1,0 +1,2 @@
+Si tu change de port tu dois l'ajouter aussi dans le dossier en tapant la commande nano /etc/apache2/ports.conf
+par exemple si tu ajoute le port 8080 tu ajoute listen 8080
