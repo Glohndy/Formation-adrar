@@ -1,0 +1,20 @@
+1)sudo docker run mattrayner/lamp
+2)Ensuite un 2ème onglet sur Mobaxterm pour se connecter en ensuite tu tape la commande ssh jeanmarie@172.16.8.28
+3)La commande: sudo docker ps 
+pour verifier que effectivement mattrayner/lamp est bien installé
+3)Ensuite avec la commande suivante: [docker run -i -t -p "80:80" -v ${PWD}/app:/app -v ${PWD}/mysql:/var/lib/mysql mattrayner/lamp:latest]
+tu crée ton site et tu le met dans /home/jeanmarie/  et tu remplace le mot "app" du lien ci-dessus par le nom du dossier de ton site 
+
+4) pour lancer le site tu tape l'adresse ip de ton serveur sur le navigateur
+
+5)Pour se connecter à la base de donnée mysql tu tape la commande: http://172.16.8.28/phpmyadmin/
+identifiant admin
+MDP: FKyYp4PLrMTZ
+
+6)installer wget pour pouvoir telecharger des application sur ssh
+commande: sudo apt install wget
+Ensuiye la commande : sudo apt install zip
+ensuite tu tape la commande [wget + lien de l'application]
+Ensuite : unzip latest-fr_FR.zip
+
+

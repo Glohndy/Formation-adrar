@@ -1,0 +1,28 @@
+INSTALLER DOCKER-COMPOSE
+Commande: sudo apt install docker-compose
+1)
+mkdir youpi
+2)
+nano docker-compose.yml(
+version: "3"
+services:
+	wp:
+	image: wordpress
+	ports:
+	- "80:80")
+
+sudo docker-compose up
+
+
+Info: pour voir les contenaire lancé on tape la commande: sudo docker ps
+ensuite on stop ces contenaire avant de lancer un autre en tapant la commande suivante:
+sudo docker stop + [les debuts des lettres et des chiffres]
+exemple: sudo docker stop 3de 306
+
+si ça ne fonctionne pas on tape la commande: sudo docker container prune
+ensuite sudo docker volume prune
+
+
+
+
+
