@@ -1,0 +1,2 @@
+Lorsqu'il y a 1,1 dans la cardinalité de l'autre coté c'est jamais 1,n mais plutot 0,n
+mais dans le cas ou d'un coté 0,1  on peut avoir 1,n de l'autre coté
