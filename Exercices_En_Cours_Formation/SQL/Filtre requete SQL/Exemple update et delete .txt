@@ -1,0 +1,11 @@
+-- mettre à jour le nom_produit de tous les produits
+UPDATE produit SET nom_produit = 'Pomme1';
+-- mettre à jour le nom_produit du produit 1
+UPDATE produit SET nom_produit = 'Pomme' WHERE id_produit = 1;
+-- supprimer le produit 6
+DELETE FROM produit WHERE id_produit = 6;
+-- mettre à jour le prix du produit
+UPDATE produit SET prix_produit = prix_produit+1 
+WHERE description_produit = 'baguette de pain';
+-- mettre à jour le nom du produit
+UPDATE produit SET nom_produit = CONCAT('pdt_',nom_produit);

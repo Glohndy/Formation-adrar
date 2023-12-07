@@ -1,0 +1,4 @@
+show database : liste des base de donnée
+use + [nom de la table] : utiliser la base de donnée
+show Table : listes des tables
+describe + [nom de la table] : listes des colonnes de la tables

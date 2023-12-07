@@ -1,0 +1,17 @@
+-- ajouter une colonne avec contrainte
+ALTER TABLE utilisateur
+ADD COLUMN code_postal_utilisateur VARCHAR(50);
+
+-- ajouter une contrainte
+ALTER TABLE utilisateur
+ADD CONSTRAINT verif_code_postal
+CHECK(code_postal_utilisateur LIKE '_____');
+
+-- ajouter une colonne avec contrainte
+ALTER TABLE utilisateur
+ADD COLUMN age_utilisateur INT;
+
+-- ajouter une contrainte age plus grand ou égal à 18
+ALTER TABLE utilisateur
+ADD CONSTRAINT verif_age
+CHECK(age_utilisateur >=18);

@@ -1,0 +1,6 @@
+Exercice Requête de consultation :
+-Mettre à jour le prix des produits augmenter le prix de 10%,
+-Ajouter un nouveau vendeur,
+-Mettre en majuscule le nom et le prenom de tous les vendeurs,
+-Remplacer la date (mois) des tickets du mois de decembre par janvier,
+-Supprimer le vendeur ajouté précédement.

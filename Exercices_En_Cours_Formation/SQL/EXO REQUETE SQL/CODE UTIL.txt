@@ -1,0 +1,6 @@
+-- désactiver la vérification foreign key
+SET FOREIGN_KEY_CHECKS = 0;
+-- vider la table produit
+TRUNCATE produit;
+-- réactiver la sécurité foreign key
+SET FOREIGN_KEY_CHECKS = 1;

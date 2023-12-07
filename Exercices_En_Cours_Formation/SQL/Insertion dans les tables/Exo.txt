@@ -1,0 +1,8 @@
+Exercice 1 Requête de MAJ Insert :
+Dans la base de données ci-dessus (ticket de caisse) :
+-Ajouter 3 catégories,
+-Ajouter 5 produits,
+-Ajouter 3 vendeurs,
+-Ajouter 5 tickets de caisse,
+-Ajouter 2 produits et une quantité à chaque ticket de caisse (table ajouter).
+M'envoyer le code SQL en MP.

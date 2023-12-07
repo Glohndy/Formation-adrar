@@ -1,0 +1,2 @@
+Activer mysql pour la base de donnée
+Activer apache et appuyer sur admin de mysql pour avoir l'interface de la base de donnée
